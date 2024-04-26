@@ -36,12 +36,12 @@ def get_csv_text(file):
     return "Empty"
 
 
-st.set_page_config(page_title="Cérebro RD", page_icon="books")
-st.title("Cérebro RD 🎈")
+st.set_page_config(page_title="IBB_Academy", page_icon="books")
+st.title("IBB_Academy 🎈")
 
 
 
-about = st.sidebar.expander("🧠 Sobre o Cérebro RD")
+about = st.sidebar.expander("🧠 Sobre IBB_Academy")
 sections = [r"""
 Por aqui você consegue aliar a tecnologia excepcional GPT ao conteúdo do RD, com infinitas possibilidades.
 Pesquise por assuntos ,aulas semanais do RD até a 068 e dos módulos de saúde financeira, musculação, nutrição,NEC e Masterclass, vejas livros que o Eslen indica com seus resumos, faça perguntas sobre conteúdos do RD, se informe sobre outros projetos do Eslen , etc..
