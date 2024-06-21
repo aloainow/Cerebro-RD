@@ -37,27 +37,14 @@ def get_csv_text(file):
 
 
 st.set_page_config(page_title="IBB_Academy", page_icon="books")
-st.title("IBB_Academy 🎈")
+st.title("IBB_Academy 🏀 ")
 
 
 
 about = st.sidebar.expander("🧠 Sobre IBB_Academy")
 sections = [r"""
-Por aqui você consegue aliar a tecnologia excepcional GPT ao conteúdo do RD, com infinitas possibilidades.
-Pesquise por assuntos ,aulas semanais do RD até a 068 e dos módulos de saúde financeira, musculação, nutrição,NEC e Masterclass, vejas livros que o Eslen indica com seus resumos, faça perguntas sobre conteúdos do RD, se informe sobre outros projetos do Eslen , etc..
-
-Para extrair o melhor da tecnologia GPT no conteúdo do RD, utilize comandos como :
-
-Formato: Defina o formato ou a estrutura. (Ex: lista, tópicos, markdown);
-Objetivo: Indique o objetivo ou propósito da resposta. (Ex: informar);
-Contexto: Forneça informações, dados ou contexto para geração de conteúdo;
-Escopo: Determine os limites ou a abrangência do tópico em questão;
-Palavras-chave: Liste palavras-chave, frases importantes a serem incluídas ou resumos;
-Chamada para ação: Inclua uma chamada clara para ação ou indique os próximos passos a serem seguidos.
-
-Lembrando que essa é uma ferramenta de APOIO, por isso aconselhamos sempre a assisitr os conteúdos do RD antes de utilizar essa ferramenta.
-
-Aproveite!    
+Assistente virtual para treinadores. Baseado no curso de treinadores da FIBA, esse modelo de IA irá auxiliar os treinadores de basquete nas mais variadas áreas .
+Por aqui você consegue tirar duvidas relacionadas a modalidade basquete, desde regras, exercícios , fundamentos e tática .
     """]
 for section in sections:
     about.write(section)
@@ -137,7 +124,7 @@ if file_paths is not None:
     
     for msg in st.session_state.messages:
         if msg["role"] == "Assistant":
-            st.chat_message("assistant", avatar="🎈").write(msg["content"])
+            st.chat_message("assistant", avatar="🏀").write(msg["content"])
         else:
             st.chat_message(msg["role"]).write(msg["content"])
 
@@ -199,7 +186,7 @@ Answer:
             
         #chain = load_qa_chain(ChatOpenAI(temperature=0.9, model="gpt-3.5-turbo-0613", streaming=True) , verbose= True, prompt = PROMPT, memory=memory,chain_type="stuff")
 
-        with st.chat_message("assistant", avatar="🎈"):
+        with st.chat_message("assistant", avatar="🏀"):
             st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=True)
         
             response = chain.run(input_documents=docs, question = prompt, callbacks=[st_cb])
